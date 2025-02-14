@@ -1,0 +1,70 @@
+<div class="panel-body">
+    <form [formGroup]="userDetailsForm">
+        <div class="row">
+            <div class="form-group col-sm-12 col-md-6 col-lg-4 px-4 mb-4" >
+                <label for="policyNo" class="lbl">Rule Name</label>
+                <input type="text" class="form-control" id="ruleName" 
+                    formControlName="ruleName" />
+            </div>
+
+            <div class="dropdown form-group col-sm-12 col-md-6 col-lg-4 px-4 mb-4" id="">
+                <label for="contributionFrequency" class="lbl">Active</label>
+                <select class="form-control" id="Active" 
+                    formControlName="activeUser" name="active">
+                    <option value="0" class="text-center" selected>Select</option>
+                    <option value="1" class="text-center">Yes</option>
+                    <option value="2" class="text-center">No</option>
+                </select>
+            </div>
+
+            <div class="dropdown form-group col-sm-12 col-md-6 col-lg-4 px-4 mb-4" id="">
+                <label for="contributionFrequency" class="lbl">Type</label>
+                <select class="form-control" id="Active" 
+                    formControlName="activeType" name="active">
+                    <option value="0" class="text-center" selected>Select</option>
+                    <option value="1" class="text-center">Match</option>
+                    <option value="2" class="text-center">Custom</option>
+                    <option value="3" class="text-center">Monitor</option>
+                </select>
+            </div>
+
+            <div class="dropdown form-group col-sm-12 col-md-6 col-lg-4 px-4 mb-4" id="">
+                <label for="contributionFrequency" class="lbl">Favourite</label>
+                <select class="form-control" id="favourite" 
+                    formControlName="favourite" name="favourite">
+                    <option value="0" class="text-center" selected>Select</option>
+                    <option value="1" class="text-center">yes</option>
+                    <option value="2" class="text-center">No</option>
+                </select>
+            </div>
+            <div class="dropdown form-group col-sm-12 col-md-6 col-lg-4 px-4 mb-4" id="">
+                <label for="contributionFrequency" class="lbl">Schedule</label>
+                <select class="form-control" id="favourite" 
+                    formControlName="Schedule" name="Schedule">
+                    <option value="0" class="text-center" selected>Select</option>
+                    <option value="1" class="text-center">yes</option>
+                    <option value="2" class="text-center">No</option>
+                </select>
+            </div>
+
+            <div class="form-group col-sm-12 col-md-6 col-lg-4 px-4 mb-4" >
+                <label for="policyNo" class="lbl">Created Date</label>
+                <input type="date" class="form-control" id="createdDate" 
+                    formControlName="createdDate" />
+            </div>
+
+            <div class="dropdown form-group col-sm-12 col-md-6 col-lg-4 px-4 mb-4" id="">
+                <label for="contributionFrequency" class="lbl">Alter</label>
+                <select class="form-control" id="favourite" 
+                    formControlName="alter" name="alter">
+                    <option value="0" class="text-center" selected>Select</option>
+                    <option value="1" class="text-center">yes</option>
+                    <option value="2" class="text-center">No</option>
+                </select>
+            </div>
+        </div>
+    </form>
+    <div class="button-poistion">
+        <button  class="btn-yellow btn">Save</button>
+    </div>
+</div>

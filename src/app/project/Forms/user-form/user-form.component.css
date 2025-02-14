@@ -1,0 +1,9 @@
+.btn-yellow{
+    color: #000;
+    background-color: #ffbb33;
+}
+
+.button-poistion{
+    display: flex;
+    justify-content: end;
+}
