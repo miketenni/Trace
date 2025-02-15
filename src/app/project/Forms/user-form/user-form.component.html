@@ -11,9 +11,9 @@
                 <label for="contributionFrequency" class="lbl">Active</label>
                 <select class="form-control" id="Active" 
                     formControlName="activeUser" name="active">
-                    <option value="0" class="text-center" selected>Select</option>
-                    <option value="1" class="text-center">Yes</option>
-                    <option value="2" class="text-center">No</option>
+                    <option value="Select" class="text-center" selected>Select</option>
+                    <option value="Yes" class="text-center">Yes</option>
+                    <option value="No" class="text-center">No</option>
                 </select>
             </div>
 
@@ -21,10 +21,10 @@
                 <label for="contributionFrequency" class="lbl">Type</label>
                 <select class="form-control" id="Active" 
                     formControlName="activeType" name="active">
-                    <option value="0" class="text-center" selected>Select</option>
-                    <option value="1" class="text-center">Match</option>
-                    <option value="2" class="text-center">Custom</option>
-                    <option value="3" class="text-center">Monitor</option>
+                    <option value="Select" class="text-center" selected>Select</option>
+                    <option value="Match" class="text-center">Match</option>
+                    <option value="Custom" class="text-center">Custom</option>
+                    <option value="Monitor" class="text-center">Monitor</option>
                 </select>
             </div>
 
@@ -32,18 +32,18 @@
                 <label for="contributionFrequency" class="lbl">Favourite</label>
                 <select class="form-control" id="favourite" 
                     formControlName="favourite" name="favourite">
-                    <option value="0" class="text-center" selected>Select</option>
-                    <option value="1" class="text-center">yes</option>
-                    <option value="2" class="text-center">No</option>
+                    <option value="Select" class="text-center" selected>Select</option>
+                    <option value="yes" class="text-center">yes</option>
+                    <option value="No" class="text-center">No</option>
                 </select>
             </div>
             <div class="dropdown form-group col-sm-12 col-md-6 col-lg-4 px-4 mb-4" id="">
                 <label for="contributionFrequency" class="lbl">Schedule</label>
                 <select class="form-control" id="favourite" 
                     formControlName="Schedule" name="Schedule">
-                    <option value="0" class="text-center" selected>Select</option>
-                    <option value="1" class="text-center">yes</option>
-                    <option value="2" class="text-center">No</option>
+                    <option value="Select" class="text-center" selected>Select</option>
+                    <option value="yes" class="text-center">yes</option>
+                    <option value="No" class="text-center">No</option>
                 </select>
             </div>
 
@@ -58,13 +58,13 @@
                 <select class="form-control" id="favourite" 
                     formControlName="alter" name="alter">
                     <option value="0" class="text-center" selected>Select</option>
-                    <option value="1" class="text-center">yes</option>
-                    <option value="2" class="text-center">No</option>
+                    <option value="yes" class="text-center">yes</option>
+                    <option value="No" class="text-center">No</option>
                 </select>
-            </div>
+            </div>    
         </div>
     </form>
     <div class="button-poistion">
-        <button  class="btn-yellow btn">Save</button>
+        <button  class="btn-yellow btn" (click)="onSave()">Save</button>
     </div>
 </div>

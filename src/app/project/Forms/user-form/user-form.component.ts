@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CommonService } from '../../common.service';
 
 @Component({
   selector: 'app-user-form',
@@ -9,8 +10,8 @@ import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule } from '@angul
 })
 export class UserFormComponent {
   userDetailsForm!:FormGroup;
-
-  constructor(public fb:FormBuilder){
+  FormDetailsArray:any[]=[];
+  constructor(public fb:FormBuilder,private service:CommonService){
 
   }
 
@@ -24,8 +25,16 @@ export class UserFormComponent {
       activeUser:[''],
       activeType:[''],
       favourite:[''],
+      alter:[''],
       createdDate:[''],
       Schedule:['']
     })
+  }
+
+  onSave(){
+    this.FormDetailsArray.push(this.userDetailsForm.value)
+    this.userDetailsForm.reset();
+    console.log(this.FormDetailsArray);
+    this.service.updateData(this.FormDetailsArray)
   }
 }
