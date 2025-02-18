@@ -7,6 +7,7 @@ import {
 } from '@angular/forms';
 import { CommonService } from '../../common.service';
 import { v4 as uuidv4 } from 'uuid';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-user-form',
@@ -17,11 +18,19 @@ import { v4 as uuidv4 } from 'uuid';
 export class UserFormComponent {
   userDetailsForm!: FormGroup;
   FormDetailsArray: any[] = [];
+  editPatchValue:any;
   count: number = 1;
-  constructor(public fb: FormBuilder, private service: CommonService) {}
+
+  constructor(public fb: FormBuilder, private service: CommonService,private router: Router) {}
 
   ngOnInit() {
     this.initialForm();
+  }
+
+  getEditForm(){
+    this.editPatchValue = JSON.parse(
+      sessionStorage.getItem('editUserForm') || '[]'
+    );    
   }
 
   initialForm() {
